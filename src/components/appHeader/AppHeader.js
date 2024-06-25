@@ -1,4 +1,5 @@
 import './appHeader.scss';
+import ComicsList from '../comicsList/ComicsList';
 
 const AppHeader = () => {
     return (
@@ -12,7 +13,7 @@ const AppHeader = () => {
                 <ul>
                     <li><a href="#">Characters</a></li>
                     /
-                    <li><a href="#">Comics</a></li>
+                    <li><a onClick={() => <ComicsList />} href="#">Comics</a></li>
                 </ul>
             </nav>
         </header>

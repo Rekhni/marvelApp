@@ -7,6 +7,8 @@ import CharInfo from '../charInfo/CharInfo';
 import RandomChar from '../randomChar/RandomChar';
 import { useState } from 'react';
 import ErrorBoundary from '../errorBoundary/ErrorBoundary';
+import ComicsList from '../comicsList/ComicsList';
+import AppBanner from '../appBanner/AppBanner'
 
 
 const App = () => {
@@ -23,7 +25,7 @@ const App = () => {
         <div className='app'>
             <AppHeader />
             <main>
-                <ErrorBoundary>
+                {/* <ErrorBoundary>
                     <RandomChar/>   
                 </ErrorBoundary>
                 <div className="char__content">
@@ -34,7 +36,9 @@ const App = () => {
                         <CharInfo charId={selectedChar}/>
                     </ErrorBoundary>
                 </div>
-                <img src={decoration} alt="vision" className="bg-decoration" />
+                <img src={decoration} alt="vision" className="bg-decoration" /> */}
+                <AppBanner/>
+                <ComicsList/>
             </main>
         </div>
     );
