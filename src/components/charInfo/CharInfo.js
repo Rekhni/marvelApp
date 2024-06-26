@@ -5,6 +5,7 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
 import { useState, useEffect } from 'react';
 import useMarvelService from '../../services/MarvelService';
+import { Link } from 'react-router-dom';
 
 const CharInfo = (props) => {
     const [char, setChar] = useState(null);
@@ -78,10 +79,11 @@ const View = ({char}) => {
                 {comics.length > 0 ? null : 'There is no comics with this character.'}
                 {
                     comics.map((item, i) => {
+                        const comicId = item.resourceURI.substring(43);
                         if (i >= 10) return;
                         return (
                             <li key={i} className="char__comics-item">
-                                {item.name}
+                                <Link to={`/comics/${comicId}`}>{item.name}</Link>
                             </li>
                         )
                     })
