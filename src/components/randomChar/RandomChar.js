@@ -4,9 +4,9 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 import './randomChar.scss';
 import useMarvelService from '../../services/MarvelService';
 import mjolnir from '../../resources/img/mjolnir.png';
+import { Link } from 'react-router-dom';
 
 const RandomChar = () => {
-
     const [char, setChar] = useState({});
 
     const {loading, error, getCharacter, clearError} = useMarvelService();
